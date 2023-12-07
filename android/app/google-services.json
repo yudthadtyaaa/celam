@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "147988034947",
+    "project_id": "celam-fb8f4",
+    "storage_bucket": "celam-fb8f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147988034947:android:e4bf5f98ea76b0970772b6",
+        "android_client_info": {
+          "package_name": "com.example.celam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV2NrRjZbAONMBy8x6sU1tvcUyldoEX_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
