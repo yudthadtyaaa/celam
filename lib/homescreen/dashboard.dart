@@ -75,10 +75,10 @@ class _DashboardState extends State<Dashboard> {
       child: Padding(
         padding: const EdgeInsets.only(top: 8.0),
         child: Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/background/bg1-icon.png'),
-                  fit: BoxFit.cover)),
+          // decoration: BoxDecoration(
+              // image: DecorationImage(
+              //     image: AssetImage('assets/background/bg1-icon.png'),
+              //     fit: BoxFit.cover)),
           child: Column(
             children: [
               Row(
@@ -293,7 +293,7 @@ class _DashboardState extends State<Dashboard> {
                                 snapshot.data ?? [], 'Pembayaran');
 
                             double totalTransfer =
-                                overallBalance(snapshot.data ?? [], 'Transfer');
+                                overallBalance(snapshot.data ?? [], 'transfer');
 
                             double totalDeposit = totalLangganan +
                                 totalPembayaran +
