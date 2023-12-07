@@ -1,5 +1,5 @@
-import 'package:celam/screens/homescreen/home.dart';
-import 'package:celam/screens/introduction_screen/register.dart';
+import '../homescreen/home.dart';
+import './register.dart';
 import 'package:celam/services/accountAuth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -41,17 +41,19 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
         await Auth().login(email, pin);
         FirebaseAuth.instance.authStateChanges().listen((User? user) {
           if (user != null) {
-            if(user.emailVerified){
+            if (user.emailVerified) {
               final snackBar = SnackBar(
                 content: Text('Selamat datang! Akun terverifikasi!'),
-                action: SnackBarAction(label: 'Close', textColor: Colors.grey, onPressed: () {}),
+                action: SnackBarAction(
+                    label: 'Close', textColor: Colors.grey, onPressed: () {}),
                 backgroundColor: Color(0xFF255e36),
               );
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            } else{
+            } else {
               final snackBar = SnackBar(
                 content: Text('Akun anda belum terverifikasi!'),
-                action: SnackBarAction(label: 'Close', textColor: Colors.grey, onPressed: () {}),
+                action: SnackBarAction(
+                    label: 'Close', textColor: Colors.grey, onPressed: () {}),
                 backgroundColor: Color(0xFF255e36),
               );
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -106,9 +108,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                   child: Text('OK'))
             ],
           );
-        }
-      )
-    );
+        }));
   }
 
   handleClear() {
@@ -155,7 +155,10 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                             duration: Duration(milliseconds: 500),
                             curve: Curves.easeInOut);
                       },
-                      icon: Icon(Icons.arrow_circle_right_rounded, size: 50,),
+                      icon: Icon(
+                        Icons.arrow_circle_right_rounded,
+                        size: 50,
+                      ),
                       color: Colors.white,
                     )
                   ],
@@ -195,7 +198,10 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                             duration: Duration(milliseconds: 500),
                             curve: Curves.easeInOut);
                       },
-                      icon: Icon(Icons.arrow_circle_right_rounded, size: 50,),
+                      icon: Icon(
+                        Icons.arrow_circle_right_rounded,
+                        size: 50,
+                      ),
                       color: Color(0xFF255e36),
                     )
                   ],
@@ -236,7 +242,8 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                                 Text(
                                   'Email',
                                   style: TextStyle(
-                                      fontSize: 18, fontWeight: FontWeight.bold),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 TextFormField(
                                   controller: _emailController,
@@ -255,7 +262,8 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                                 Text(
                                   'PIN',
                                   style: TextStyle(
-                                      fontSize: 18, fontWeight: FontWeight.bold),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 TextFormField(
                                     controller: _pinController,

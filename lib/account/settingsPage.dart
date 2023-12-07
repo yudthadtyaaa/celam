@@ -1,4 +1,4 @@
-import 'package:celam/screens/introduction_screen/intro.dart';
+import '../introduction_screen/intro.dart';
 import 'package:celam/services/balanceAuth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -131,7 +131,7 @@ class _SettingsPageState extends State<SettingsPage> {
     String pin = _pinController.text.trim();
     if (pin.isEmpty) {
       _alertDialog('Error', 'Masukkan PIN dengan benar');
-    } else{
+    } else {
       try {
         User? user = FirebaseAuth.instance.currentUser;
 
@@ -251,8 +251,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       context, "Ganti Username", 'changeUsername'),
                   buildAccountOptionRow(
                       context, "Ganti Email & PIN", 'changeEmail'),
-                  buildAccountOptionRow(
-                      context, "Ganti PIN", 'changePIN'),
+                  buildAccountOptionRow(context, "Ganti PIN", 'changePIN'),
                   buildAccountOptionRow(context, "Hapus Akun", 'hapusAkun'),
                 ],
               ),
@@ -382,7 +381,7 @@ class _SettingsPageState extends State<SettingsPage> {
                               child: Text('Hapus')),
                         ],
                       )
-                    else if(content == 'changePIN')
+                    else if (content == 'changePIN')
                       AlertDialog(
                         content: Column(
                           mainAxisSize: MainAxisSize.min,

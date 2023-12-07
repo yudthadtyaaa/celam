@@ -1,4 +1,4 @@
-import 'package:celam/screens/introduction_screen/intro.dart';
+import '../introduction_screen/intro.dart';
 import 'package:celam/services/accountAuth.dart';
 import 'package:celam/services/balanceAuth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -62,7 +62,8 @@ class _RegisState extends State<Regis> {
           double initialBalance = 0.0;
           FirestoreService firestoreService = FirestoreService();
           firestoreService.registerBalance(username, uid, initialBalance);
-          _alertDialog('Success', 'Akun berhasil dibuat, cek email untuk verifikasi!');
+          _alertDialog(
+              'Success', 'Akun berhasil dibuat, cek email untuk verifikasi!');
         } on FirebaseAuthException catch (e) {
           if (e.code == 'email-already-in-use') {
             _alertDialog('Error', 'Email sudah terdaftar!');

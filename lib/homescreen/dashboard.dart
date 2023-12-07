@@ -1,5 +1,5 @@
-import 'package:celam/screens/balance/buy.dart';
-import 'package:celam/screens/balance/transfer.dart';
+import '../balance/transfer.dart';
+import '../balance/buy.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
 import 'package:celam/services/balanceAuth.dart';

@@ -1,5 +1,5 @@
 import './introduction_screen/intro.dart';
-import './introduction_screen/register.dart';
+import './homescreen/home.dart';
 import 'package:celam/services/accountAuth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,25 +26,25 @@ class NotLogged extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
         useMaterial3: true,
         textTheme: ThemeData.light().textTheme.copyWith(
-          bodyText1: TextStyle(
-            fontFamily: 'OpenSans',
-          ),
-          bodyText2: TextStyle(
-            fontFamily: 'OpenSans',
-          ),
-        ),
+              bodyText1: TextStyle(
+                fontFamily: 'OpenSans',
+              ),
+              bodyText2: TextStyle(
+                fontFamily: 'OpenSans',
+              ),
+            ),
       ),
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
         textTheme: ThemeData.dark().textTheme.copyWith(
-          bodyText1: TextStyle(
-            fontFamily: 'OpenSans',
-          ),
-          bodyText2: TextStyle(
-            fontFamily: 'OpenSans',
-          ),
-        ),
+              bodyText1: TextStyle(
+                fontFamily: 'OpenSans',
+              ),
+              bodyText2: TextStyle(
+                fontFamily: 'OpenSans',
+              ),
+            ),
       ),
       themeMode: ThemeMode.system,
       home: IntroductionScreen(),
@@ -64,27 +64,27 @@ class Logged extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
         useMaterial3: true,
         textTheme: ThemeData.light().textTheme.copyWith(
-          bodyText1: TextStyle(
-            fontFamily: 'OpenSans',
-          ),
-          bodyText2: TextStyle(
-            fontFamily: 'OpenSans',
-          ),
-        ),
+              bodyText1: TextStyle(
+                fontFamily: 'OpenSans',
+              ),
+              bodyText2: TextStyle(
+                fontFamily: 'OpenSans',
+              ),
+            ),
       ),
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
         useMaterial3: true,
         textTheme: ThemeData.dark().textTheme.copyWith(
-          bodyText1: TextStyle(
-            color: Colors.black,
-            fontFamily: 'OpenSans',
-          ),
-          bodyText2: TextStyle(
-            color: Colors.black,
-            fontFamily: 'OpenSans',
-          ),
-        ),
+              bodyText1: TextStyle(
+                color: Colors.black,
+                fontFamily: 'OpenSans',
+              ),
+              bodyText2: TextStyle(
+                color: Colors.black,
+                fontFamily: 'OpenSans',
+              ),
+            ),
       ),
       themeMode: ThemeMode.system,
       home: HomeScreen(),

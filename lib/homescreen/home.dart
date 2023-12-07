@@ -1,6 +1,6 @@
-import 'package:celam/screens/account/settingsPage.dart';
-import 'package:celam/screens/balance/topup.dart';
-import 'package:celam/screens/homescreen/dashboard.dart';
+import './dashboard.dart';
+import '../balance/topup.dart';
+import '../account/settingsPage.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,7 +11,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   int _currentPages = 0;
 
   final List<Widget> _children = [
@@ -20,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     SettingsPage(),
   ];
 
-  void onTapped(int index){
+  void onTapped(int index) {
     setState(() {
       _currentPages = index;
     });
@@ -35,12 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           'CELAM',
           style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontFamily: 'KemasyuranJawa',
-            color: Colors.white
-          ),
+              fontWeight: FontWeight.bold,
+              fontFamily: 'KemasyuranJawa',
+              color: Colors.white),
         ),
-        
         centerTitle: true,
       ),
       body: _children[_currentPages],
@@ -50,18 +47,11 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedItemColor: Color(0xFF255e36),
         unselectedItemColor: Colors.grey,
         items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Beranda'
-          ),
+              icon: Icon(Icons.attach_money), label: 'Deposit'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.attach_money),
-            label: 'Deposit'
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Pengaturan'
-          ),
+              icon: Icon(Icons.settings), label: 'Pengaturan'),
         ],
         elevation: 10,
         backgroundColor: Color(0xFFf9f7f7),
